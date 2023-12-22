@@ -1,73 +1,44 @@
 //Declaração de Variaveis Globais
-//Numerico
-var Total = 0.0
-//String
-var Numero = ''
 //Objetos
 var TelaResultado = document.getElementsByTagName('input')
 
 //==================Funções====================
 
-
 /*
-* Função: numero(Recebe o valor Digitado)
-* Descrição: Guarda o valor selecionado para futura ação
+* Função: guardaValor(Recebe o valor Digitado)
+* Descrição: Insere o Valor da Tela da Calculadora
 * Data: 21/12/2023
+* Ult. Modificação: 22/12/2023
 * Programador(a): Ighor Drummond
 */
-function numero(valor) {
+function guardaValor(valor) {
 
-	if (true) {
-		//Recebe o Valor e concatena na variavel Numero 
-		Numero += valor
-		//Insere o valor Selecionado na Tela
-		TelaResultado[0].value += valor
+	if(valor != 'OFF'){
+		//Insere o valor Selecionado no Input Tela
+		TelaResultado[0].value += valor		
+	}else{
+		if(confirm("Você deseja realmente desligar Calculadora? Se Aperta Sim, fechará a Pagina!")){
+			window.close()//Fecha a Pagina
+		}
 	}
-}
-
-/*
-* Função: operacao(Recebe a Operação Selecionada)
-* Descrição: Guarda a Operação Selecionada
-* Data: 21/12/2023
-* Programador(a): Ighor Drummond
-*/
-function operacao(opc) {
-	//Concatena a Operação na Variavel Numero
-	switch (opc) {
-		case '+':
-			Numero += '+'
-			break
-		case 'X':
-			Numero += 'X'
-			break
-		case '/':
-			Numero += '/'
-			break
-		case '-':
-			Numero += '-'
-			break
-		case '%':
-			Numero += '%'
-			break
-	}
-	TelaResultado[0].value += Numero.charAt(Numero.length - 1)//Insere o valor de Operação na Tela
 }
 
 /*
 * Função: limpaTela()
 * Descrição: Limpa a Tela responsavel por apresentar os valores
 * Data: 21/12/2023
+* Ult. Modificação: 22/12/2023
 * Programador(a): Ighor Drummond
 */
 function limpaTela() {
 	TelaResultado[0].value = ''//Limpa o valor do Input Tela
-	Numero = '' //Limpa o Historico
 }
 
 /*
 * Função: realizaCalculo()
 * Descrição: Realizará o Calculo Final
 * Data: 21/12/2023
+* Ult. Modificação: 22/12/2023
 * Programador(a): Ighor Drummond
 */
 function realizaCalculo() {
@@ -75,24 +46,29 @@ function realizaCalculo() {
 	//String
 	var caracter = ''
 	var Alfabeto = '1234567890.%-+X/'//Usado para verificar se é numero ou sinal
+	var NumeroC  = ''
 	//Numerico
 	var nCont = 0
 	var nCont2 = 0
 	var nCont3 = 0
+	var Total = 0
 	//Array
 	var guardaValores = new Array()
 
+	//Atualiza o valor que contem na tela
+	NumeroC = TelaResultado[0].value
+
 	//Valida se o Numero não está vazio!
-	if(Numero == ''){
+	if(NumeroC == ''){
 		return 0
 	}
 
-	//Limpa o Undefined
+	//Limpa o Undefined da Primeira Posição
 	guardaValores[0] = ''
 
 	//Organiza Numeros para Numeros e Operação para Operação no Vetor
-	for(nCont = 0; nCont <= Numero.length - 1; nCont++){
-		caracter = Numero.charAt(nCont)	//Pega um caracter por vez para analisar seu tipo
+	for(nCont = 0; nCont <= NumeroC.length - 1; nCont++){
+		caracter = NumeroC.charAt(nCont)//Pega um caracter por vez para analisar seu tipo
 
 		//Verificar qual é o tipo de caracter. se é numero ou operação Matemática
 		for(nCont2 = 0; nCont2 <= Alfabeto.length; nCont2++){
@@ -133,6 +109,7 @@ function realizaCalculo() {
 			Total = parseFloat(guardaValores[nCont])
 		}
 	}
-	//Exibe na Tela
+
+	//Exibe na Tela o Total
 	TelaResultado[0].value = Total.toString()
 }

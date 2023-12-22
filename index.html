@@ -18,10 +18,9 @@
       	<!-- Favicon -->
       	<link rel="icon" href="img/calculadora.png">
 
-		<title>Calculadora Avançada</title>
+		<title>Calculadora Aprimorada</title>
 	</head>
 	<body>
-
 		<header><!-- Inicio do Header -->
 			<h1>Calculadora Aprimorada</h1>
 		</header><!-- Fim do Header -->
@@ -37,34 +36,34 @@
 				<div id="teclado"><!-- Inicio das Teclas -->
 					<div class="linha"><!-- Inicio da Primeira Linha -->
 						<div onclick="limpaTela()" class="botao1"><span>C</span></div>
-						<div onclick="operacao('/')" class="botao1"><span>/</span></div>
-						<div onclick="operacao('X')"class="botao1"><span>X</span></div>
-						<div onclick="operacao('%')" class="botao1"><span>%</span></div>
+						<div onclick="guardaValor('/')" class="botao1"><span>/</span></div>
+						<div onclick="guardaValor('X')"class="botao1"><span>X</span></div>
+						<div onclick="guardaValor('OFF')" class="botao1"><span>OFF</span></div>
 					</div><!-- Fim da Primeira Linha -->
 
 					<div class="linha"><!-- Inicio da Segunda Linha -->
-						<div onclick="numero('7')" class="botao1"><span>7</span></div>
-						<div onclick="numero('8')" class="botao1"><span>8</span></div>
-						<div onclick="numero('9')" class="botao1"><span>9</span></div>
-						<div onclick="operacao('-')" class="botao1"><span>-</span></div>
+						<div onclick="guardaValor('7')" class="botao1"><span>7</span></div>
+						<div onclick="guardaValor('8')" class="botao1"><span>8</span></div>
+						<div onclick="guardaValor('9')" class="botao1"><span>9</span></div>
+						<div onclick="guardaValor('-')" class="botao1"><span>-</span></div>
 					</div><!-- Fim da Segunda Linha -->
 
 					<div class="linha"><!-- Inicio da Terceira Linha -->
-						<div onclick="numero('4')" class="botao1"><span>4</span></div>
-						<div onclick="numero('5')" class="botao1"><span>5</span></div>
-						<div onclick="numero('6')" class="botao1"><span>6</span></div>
-						<div onclick="operacao('+')" class="botao1"><span>+</span></div>
+						<div onclick="guardaValor('4')" class="botao1"><span>4</span></div>
+						<div onclick="guardaValor('5')" class="botao1"><span>5</span></div>
+						<div onclick="guardaValor('6')" class="botao1"><span>6</span></div>
+						<div onclick="guardaValor('+')" class="botao1"><span>+</span></div>
 					</div><!-- Fim da Terceira Linha -->
 
 					<div class="linha"><!-- Inicio da Quarta Linha -->
-						<div onclick="numero('1')" class="botao1"><span>1</span></div>
-						<div onclick="numero('2')" class="botao1"><span>2</span></div>
-						<div onclick="numero('3')" class="botao1"><span>3</span></div>
-						<div onclick="numero('.')" class="botao1"><span>,</span></div>
+						<div onclick="guardaValor('1')" class="botao1"><span>1</span></div>
+						<div onclick="guardaValor('2')" class="botao1"><span>2</span></div>
+						<div onclick="guardaValor('3')" class="botao1"><span>3</span></div>
+						<div onclick="guardaValor('.')" class="botao1"><span>,</span></div>
 					</div><!-- Fim da Quarta Linha -->
 
 					<div class="linha"><!-- Inicio da Quinta Linha -->
-						<div onclick="numero('0')" class="botao1 espacoX"><span>0</span></div>
+						<div onclick="guardaValor('0')" class="botao1 espacoX"><span>0</span></div>
 						<div onclick="realizaCalculo()" class="botao1"><span>=</span></div>
 					</div><!-- Fim da Quinta Linha -->					
 			</section><!-- Fim da Section -->
@@ -73,6 +72,7 @@
 		<footer><!-- Inicio do Rodapé -->
 			<h5>Todos os Direitos Reservados - Ighor Drummond 2023</h5>
 		</footer><!-- Fim do Rodapé -->
+
 		<!-- Script da Pagina -->
 		<script type="text/javascript" src="js/script.js"></script>
 	</body>

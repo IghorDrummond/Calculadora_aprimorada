@@ -8,6 +8,7 @@ var TelaResultado = document.getElementsByTagName('input')
 
 //==================Funções====================
 
+
 /*
 * Função: numero(Recebe o valor Digitado)
 * Descrição: Guarda o valor selecionado para futura ação

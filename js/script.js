@@ -81,6 +81,11 @@ function realizaCalculo() {
 	//Array
 	var guardaValores = new Array()
 
+	//Valida se o Numero não está vazio!
+	if(Numero == ''){
+		return 0
+	}
+
 	//Limpa o Undefined
 	guardaValores[0] = ''
 

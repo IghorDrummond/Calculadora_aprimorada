@@ -1,0 +1,209 @@
+/* Estilo da Pagina */
+*{
+	padding: 0;
+	margin: 0;
+}
+.clear{
+	clear: both;
+}
+
+/* Fontes Personalizadas */
+@font-face{
+	font-family: 'Bebas Neue';
+	src: url('../fonts/BebasNeue-Regular.woff');
+}
+@font-face{
+	font-family: 'Calculator';
+	src: url('../fonts/AnyConv.com__Calculator.woff');
+}
+
+/* Fundo da Pagina */
+body{
+	background: -o-linear-gradient(340.4deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%);
+	background: linear-gradient(109.6deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%);
+	font-family: 'Bebas Neue';
+	-webkit-animation: fundoAnimado 5s infinite;
+	        animation: fundoAnimado 5s infinite;
+}
+
+/* Cabeçalho */
+header{
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 2em;
+}
+header>h1{
+	-webkit-animation: entradaTitulo 1s;
+	        animation: entradaTitulo 1s;
+}
+
+/* Main */
+main{
+	width: 100vw;
+	height: auto;
+}
+main>section{
+	width: 675px;
+	height: auto;
+	margin: 50px auto;
+	background: -o-radial-gradient(24.1% 68.8%, circle, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+	background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+	border-radius: 25px;
+	-webkit-animation: entradaCalculadora 2s;
+	        animation: entradaCalculadora 2s;
+}
+
+/* section */
+
+/* Area da Tela */
+#area_tela{
+	height: 10vh;;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+#tela{
+	width: 100%;
+	height: 100%;
+	background: black;
+	color: red;
+	font-family: 'Calculator';
+	font-weight: bold;
+	font-size: 3em;
+	text-align: right;
+}
+#tela, #area_tela{
+	border-radius: 25px 25px 25px 25px;
+}
+
+/* Teclado */
+#teclado{
+	width: 100%;
+	height: 83%;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+#parte_teclado1{
+	width: 75%;
+	float: left;
+}
+#parte_teclado2{
+	width: 19%;
+	float: right;
+}
+.linha{
+	margin-top: 15px;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.botao1{
+	width: 90px;
+	height: 90px;
+	border-radius: 10px;
+	font-size: 3em;
+	text-align: center;
+	font-weight: bold;
+	color: white;	
+	background: -o-linear-gradient(top, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), -o-radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;	
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.15)), to(rgba(0,0,0,0.15))), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;	
+	background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+}
+.botao1 span{
+	margin-top: 15px;
+	display: block;
+}
+.espacoX{
+	width: 70%;
+}
+
+/* Rodapé */
+footer{
+	width: 100%;
+	height: 10vh;
+	background-color: black;
+	color: white;
+	font-size: 2em;
+	text-align: center;
+	padding-top: 25px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	position: fixed;
+	top: 90%;
+}
+
+/* Hover */
+.botao1:hover{
+	background: -o-linear-gradient(top, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), -o-radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #100000;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.15)), to(rgba(0,0,0,0.15))), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #100000;
+	background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #100000;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+/* Animação */
+@-webkit-keyframes entradaTitulo{
+	from{
+		font-size: 0px;
+	}to{
+		font-size: 2em;
+	}
+}
+@keyframes entradaTitulo{
+	from{
+		font-size: 0px;
+	}to{
+		font-size: 2em;
+	}
+}
+
+@-webkit-keyframes entradaCalculadora{
+	from{
+		-webkit-transform: scale(0);
+		        transform: scale(0);
+	}
+	to{
+		-webkit-transform: scale(1.0);
+		        transform: scale(1.0);
+	}
+}
+
+@keyframes entradaCalculadora{
+	from{
+		-webkit-transform: scale(0);
+		        transform: scale(0);
+	}
+	to{
+		-webkit-transform: scale(1.0);
+		        transform: scale(1.0);
+	}
+}
+
+@media (max-width: 575.98px) {
+	body{
+		font-size: 10px;
+	}
+	main>section{
+		width: 100%;
+	}
+	.botao1{
+		width: 50px;
+		height: 50px;
+	}
+	.espacoX{
+		width: 62%;
+	}	
+	#area_tela{
+		height: 50px;
+	}	
+}

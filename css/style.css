@@ -3,9 +3,6 @@
 	padding: 0;
 	margin: 0;
 }
-.clear{
-	clear: both;
-}
 
 /* Fontes Personalizadas */
 @font-face{
@@ -19,11 +16,10 @@
 
 /* Fundo da Pagina */
 body{
-	background: -o-linear-gradient(340.4deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%);
-	background: linear-gradient(109.6deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%);
+	background: url('../img/bg.jpg') no-repeat center fixed;
+	background-size: cover;	
+	height: 100vh;
 	font-family: 'Bebas Neue';
-	-webkit-animation: fundoAnimado 5s infinite;
-	        animation: fundoAnimado 5s infinite;
 }
 
 /* Cabeçalho */
@@ -41,8 +37,9 @@ header>h1{
 /* Main */
 main{
 	width: 100vw;
-	height: auto;
+	height: 100vh;
 }
+
 main>section{
 	width: 675px;
 	height: auto;
@@ -55,10 +52,9 @@ main>section{
 }
 
 /* section */
-
 /* Area da Tela */
 #area_tela{
-	height: 10vh;;
+	height: 10vh;
 	padding: 10px;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -126,21 +122,6 @@ main>section{
 	width: 70%;
 }
 
-/* Rodapé */
-footer{
-	width: 100%;
-	height: 10vh;
-	background-color: black;
-	color: white;
-	font-size: 2em;
-	text-align: center;
-	padding-top: 25px;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
-	position: fixed;
-	top: 90%;
-}
-
 /* Hover */
 .botao1:hover{
 	background: -o-linear-gradient(top, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), -o-radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #100000;
@@ -189,6 +170,7 @@ footer{
 	}
 }
 
+/* Dispositivos de Tela Pequenos */
 @media (max-width: 575.98px) {
 	body{
 		font-size: 10px;
